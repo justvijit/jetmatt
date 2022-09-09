@@ -1,1 +1,341 @@
 /* You can add global styles to this file, and also import other style files */
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 14px;
+$fontsize2: 16px;
+$smallfontsize: 12px;
+$backgroundImage : "assets/background-blue.svg";
+$logo : "https://app.jetmatt.com/jetmatt-logo-full-light.4dc2f3c9b3d4725561d1.svg";
+$black : #000;
+$box-shadow:                  0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175);
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075);
+$fontfamily : 'Inter', sans-serif;
+$inputborder : #E4E4E4;
+$primary: #30AFD7 ;
+$primary_hover: #2082a0;
+$mx30 : 30%;
+$mx70 : 50%;
+$mx50 : 50%;
+$mx90 : 85%;
+$wMax : 480px;
+$white: #fff;
+$lightcolor:#8A8A8A;
+$subhead: 14px;
+$inputpadding : 13px 10px;
+$inputradius:5px;
+$breakpoint-tablet : 768px;
+/* Use the variables */
+html,
+body {
+  height: 100%
+}
+body {
+  background: transparent url($backgroundImage) scroll no-repeat 100% top;
+  background-size:cover;
+  background-position: 200px 0%; 
+  font-size: $fontsize;
+  font-family: $fontfamily;
+}
+.c-8 > .navbar{
+display:inline-block;
+}
+.logo{
+  width:140px;
+}
+.form-label{
+  font-size:$smallfontsize !important;
+}
+.form-control{
+  border:1px $inputborder solid;
+  font-size:$smallfontsize !important;
+  padding:$inputpadding;
+  border-radius: $inputradius;
+  box-sizing: border-box;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+gap: 10px;
+outline: none !important;
+-webket-appearance:none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.lg-bt{
+  width:50%;
+  height:auto;
+  z-index:-1;
+  left:0px;
+}
+.lg-bt img{
+  width:80%;
+}
+.rg-bt{
+  width:50%;
+  height:auto;
+  z-index:-1;
+  right:0px;
+  left:auto;
+  text-align: right;
+}
+.rg-bt img{
+  width:60%;
+}
+
+.inputpassword[type=password]{
+  background:transparent url('assets/password-hide.svg') scroll no-repeat 96% center;
+  background-size:20px;
+}
+.inputpassword[type=text]{
+  background:transparent url('assets/password-show.svg') scroll no-repeat 96% center;
+  background-size:20px;
+}
+.hello{
+  background:transparent url('assets/hello.png') scroll no-repeat center center;
+  background-size:cover;
+  height:150px;
+
+}
+.mb-3{
+  position: relative;
+}
+.password-box{
+  position: absolute;
+  bottom:0px;
+  right:0px;
+  width:50px;
+  height:50px;
+  background:transparent;
+  cursor: pointer;
+}
+
+
+:root {
+  --animate-duration: 0.2s;
+}
+.h5{
+  font-weight: 600;
+}
+.rg-bt-left img{
+  width:80%;
+  bottom:0px;
+  margin-left:5%;
+}
+.rg-bt-right img{
+  width:55%;
+  margin-left:30%;
+  bottom:0px;
+  margin-bottom:10%;
+}
+.sub-head{
+  font-size:$subhead;
+  color:$lightcolor;
+}
+.mts-5{
+  margin-top:auto;
+}
+.btn-primary{ 
+  background:$primary;
+  border:1px $primary solid;
+}
+.btn-primary:hover{ 
+  background:$primary_hover !important;
+  border:1px $primary_hover solid  !important;
+}
+.btn{
+  padding:10px;
+}
+.mx-30{
+  width:$mx30;
+  max-width:$wMax;
+}
+.mx-50{
+  max-width:$mx50;
+}
+.mx-70{
+  width:$mx70;
+max-width: 888px;
+
+}
+.mb-3{
+  padding:5px;
+}
+.btn-light{
+  border:1px $primary solid;
+  color:$primary;
+  background:$white;
+}
+.btn-light:hover{
+  border:1px $primary_hover solid !important;
+  color:$primary_hover !important;
+  background:$white !important;
+}
+.step-1 .btn{
+  width:100%;
+}
+.step-2 .btn{
+  width:$mx30;
+}
+.checkBox{
+  vertical-align:middle;
+}
+.privacy-policy{
+  text-align: center;
+}
+.privacy-policy .sub-head{
+  text-align: left; ;
+}
+.privacy-policy label{
+  font-size:13px;
+}
+.box-rounded{
+  border-radius:20px !important;
+}
+
+.inactive-slide{
+  display:none;
+}
+.team-box{
+  cursor:pointer;
+}
+.team-box:hover{
+background:#fcfcfc !important;
+}
+.team-box img {
+  width:22px;
+  vertical-align:middle;margin-right:5px;
+}
+.team-box span {
+  font-size:$fontsize2;
+  vertical-align: middle;
+  font-weight: bold;;
+}
+.sub-head-small{
+  font-size:$smallfontsize;
+  color:$lightcolor;
+}
+.team-selection{
+  float:right;
+  margin-top:-5px;
+}
+.team-selection img{
+  width:20px;
+}
+.star-tick img{
+width:60px;
+}
+.inputSmall{
+  width:50px;
+  font-size: 20px !important;
+  font-weight: bold;
+  text-align: center;
+  display:inline-block;
+  margin-right:5px;
+}
+.slider-top{
+  list-style: none;
+  padding:0px;
+  margin: 0px;
+  display: inline-block;
+  width:100%;
+  margin-bottom:20px;
+}
+.slider-index{
+  background:#fff;
+  display: inline-block;
+  height:5px;
+  width:23%;
+  margin-left:3px;
+  border-radius:3px;
+}
+.step2Next{
+  margin-left:10px;
+}
+.slide-index-active{
+  background:$primary;
+}
+.tinyfont{
+  font-size:$smallfontsize;
+}
+.text-primary{
+  color:$primary !important;
+  cursor:pointer;
+}
+.text-primary:hover{
+  text-decoration: underline;;
+}
+
+.allSlide{
+  overflow-x:hidden;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .mx-30{
+  width:$mx90;
+}
+.mx-50{
+  width:$mx90;
+}
+.mx-70{
+  width:$mx90;
+    
+}
+.lg-bt{
+  display:none;
+}
+.privacy-policy{
+  margin-top:80px !important;
+}
+.navbar{
+  padding:0px !important;
+}
+.container-fluid{
+  padding:0px !important;
+}
+.navbar-nav{
+  background:#fff;
+  border-bottom:1px #eee solid;
+}
+.navbar-nav, .nav-item, .nav-link{
+  width:100%;
+  text-align:center;
+}
+.nav-link{
+  padding:15px;
+}
+.rg-bt{
+  width:100%;
+  height:auto;
+  z-index:-1;
+  right:-30%;
+  left:auto;
+  text-align: right;
+}
+.rg-bt img{
+  width:80%;
+}
+
+.privacy-policy{
+  text-align: left;
+}
+.step-2 .btn{
+  width:100%;
+}
+.step2Next{
+  margin-left:0px;
+}
+
+
+}
