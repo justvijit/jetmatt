@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from "jquery";
 @Component({
   selector: 'app-registration',
   template: `
@@ -217,22 +216,21 @@ export class RegistrationComponent implements OnInit {
   showPasswords = [true,true,true,true,true];
 
   upto = 0;
-  liveSlide=1;
-  activeid = "";
+  liveSlide=0;
   goToStep(slide:any){
+    
+    var activeid = "step"+this.liveSlide;
     this.liveSlide = slide;
-    var activeid= $('.allSlide').find('.active-slide').attr('id');
-    $('.allSlide').find('.active-slide').attr('class','animate__animated animate__slideOutLeft');
+    document!.getElementById(activeid)!.className = 'animate__animated animate__slideOutLeft';
       setTimeout(() => {
-        var t = $('#'+activeid).attr('class');
-        t = t + " inactive-slide";
-        $('#'+activeid).attr('class',t);       
+        document!.getElementById(activeid)!.className = 'animate__animated animate__slideOutLeft inactive-slide';
         if(this.liveSlide != 0){
-          $('#step'+this.liveSlide).attr('class','animate__animated animate__slideInRight active-slide');
-          $('#step'+this.liveSlide).show();
+          document!.getElementById('step'+this.liveSlide)!.className = 'animate__animated animate__slideInRight active-slide';
+          document!.getElementById('step'+this.liveSlide)!.style.display = 'block';
+          document!.getElementById(activeid)!.style.display = 'none';
         }
       }, 300);
-  }
+ }
   changeStepIndex(index: any){
     this.stepIndex = index;
     if(index >= 0){
@@ -247,7 +245,10 @@ export class RegistrationComponent implements OnInit {
         }
       }
     }
-    this.goToStep(index);
+    if(index > 0){
+      this.goToStep(index);
+    }
+
   }
   teamSelection(option: any){
     this.teamOption = option;
